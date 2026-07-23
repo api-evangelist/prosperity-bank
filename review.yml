@@ -1,0 +1,86 @@
+aid: prosperity-bank
+name: Prosperity Bank
+review:
+  question: Does Prosperity Bank expose a first-party public developer API or documented open-finance data-access API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Prosperity Bank (Texas-chartered commercial bank, member FDIC, NMLS ID
+    466414; banking subsidiary of Prosperity Bancshares, NYSE: PB) publishes
+    NO first-party public developer portal, no downloadable OpenAPI/Swagger,
+    and no documented public API. Probes on 2026-07-23 found the developer.,
+    developers., and api. subdomains do not resolve, and /developers and /api
+    on the main site return HTTP 404. No GitHub organization exists. There is
+    no published FDX-conformant data-access API and no stated CFPB Section
+    1033 (Personal Financial Data Rights) posture from the bank. Consumer-
+    permissioned account and transaction data is available only through
+    third-party aggregators (Finicity/Mastercard Open Banking, Plaid, and
+    similar), consistent with the typical posture of a US regional bank that
+    participates in open finance via aggregators and its core provider rather
+    than a first-party API. No authentication model, base URL, or endpoint is
+    documented because no public API surface exists. This is an identity-only
+    (built-stub) record; there is no spec to harvest.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: ''
+    downloadableSpec: false
+    specProvenance: none
+    fdxParticipantDocumented: false
+    cfpb1033PostureDocumented: false
+    aggregatorAccess: true
+    aggregatorsObserved:
+      - Finicity (Mastercard Open Banking)
+      - Plaid
+    authModel: none-documented
+  probes:
+    - url: https://developer.prosperitybankusa.com
+      status: 000
+      note: Host does not resolve.
+    - url: https://developers.prosperitybankusa.com
+      status: 000
+      note: Host does not resolve.
+    - url: https://api.prosperitybankusa.com
+      status: 000
+      note: Host does not resolve.
+    - url: https://www.prosperitybankusa.com
+      status: 200
+      note: Main marketing/banking site.
+    - url: https://prosperitybankusa.com/developers
+      status: 404
+      note: No developer landing page.
+    - url: https://prosperitybankusa.com/api
+      status: 404
+      note: No API landing page.
+    - url: https://github.com/prosperitybank
+      status: 404
+      note: No GitHub organization.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API is documented by the bank.
+    - protocol: FDX
+      documented: false
+      note: No FDX-conformant data-access API is publicly documented; data sharing occurs via aggregators.
+sources:
+  - url: https://www.prosperitybankusa.com/about-us
+    type: Website
+    note: Confirms FDIC-insured, ~$43.6B holding company, 300+ branches across Texas and Oklahoma, NMLS ID 466414. No API mention.
+  - url: https://en.wikipedia.org/wiki/Prosperity_Bancshares
+    type: Reference
+    note: Company facts - Houston HQ, NYSE PB, ~$37.8B assets (2023), acquisition-driven growth.
+  - url: https://www.openbankingtracker.com/provider/prosperity-bank-tx/apis
+    type: Reference
+    note: Lists no developer resources, no API products, no SDKs, no Postman collections for Prosperity Bank - TX.
+  - url: https://fintable.io/coverage/banks/United%20States/2282_prosperity-bank-treasury-center
+    type: Reference
+    note: Indicates account/transaction data coverage via the Finicity aggregator rather than a first-party bank API.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No public API surface exists, so no OpenAPI/Swagger could be harvested.
+    apis.yml records identity plus verified common links (website, LinkedIn,
+    terms of use, privacy policy, support) and an empty apis[] list, honestly
+    reflecting aggregator-only access.

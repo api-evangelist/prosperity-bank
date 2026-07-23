@@ -1,0 +1,47 @@
+aid: prosperity-bank
+url: https://raw.githubusercontent.com/api-evangelist/prosperity-bank/refs/heads/main/apis.yml
+name: Prosperity Bank
+kind: company
+description: >-
+  Prosperity Bank is a Texas-chartered commercial bank (member FDIC, NMLS ID
+  466414) and the banking subsidiary of Prosperity Bancshares, Inc. (NYSE: PB),
+  a Houston, Texas based regional financial holding company with roughly $37-43
+  billion in total assets and 300-plus full-service branches across Texas and
+  central Oklahoma. It offers consumer and commercial banking, treasury
+  management, mortgage, and wealth services, and has grown largely through
+  acquisitions (LegacyTexas, Lone Star State Bancshares, American Bank Holding,
+  Southwest Bancshares, Stellar Bancorp). On open finance, Prosperity Bank
+  operates no first-party public developer portal or documented API: developer.
+  and api. subdomains do not resolve, and no /developers or /api pages exist.
+  Consumer-permissioned account and transaction data is reachable only through
+  third-party aggregators (Finicity/Mastercard Open Banking, Plaid, and
+  similar), not a directly published bank API. No FDX-conformant data-access API
+  or CFPB Section 1033 posture is publicly documented by the bank as of this
+  review.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Regional Bank
+- Texas
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.prosperitybankusa.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/prosperity-bank
+- type: TermsOfService
+  url: https://www.prosperitybankusa.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.prosperitybankusa.com/privacy
+- type: Support
+  url: https://www.prosperitybankusa.com/contact-us
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
