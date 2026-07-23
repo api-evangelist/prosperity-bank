@@ -32,6 +32,10 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/prosperity-bank-domain-security.yml
+- type: LLMsTxt
+  url: llms/prosperity-bank-llms.txt
 - type: Website
   url: https://www.prosperitybankusa.com/
 - type: LinkedIn

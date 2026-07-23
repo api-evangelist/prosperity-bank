@@ -1,0 +1,22 @@
+# Prosperity Bank
+
+> Prosperity Bank is a Texas-chartered commercial bank (member FDIC, NMLS ID 466414) and the banking subsidiary of Prosperity Bancshares, Inc. (NYSE: PB), a Houston, Texas based regional financial holding company with 300-plus full-service branches across Texas and central Oklahoma. It offers consumer and commercial banking, treasury management, mortgage, and wealth services. As of this review the bank operates no first-party public developer portal or documented API; consumer-permissioned account and transaction data is reachable only through third-party aggregators (Finicity/Mastercard Open Banking, Plaid, and similar). No FDX-conformant data-access API or CFPB Section 1033 posture is publicly documented by the bank.
+
+## Company
+- [Website](https://www.prosperitybankusa.com/)
+- [Contact / Support](https://www.prosperitybankusa.com/contact-us)
+- [Terms of Use](https://www.prosperitybankusa.com/terms-of-use)
+- [Privacy](https://www.prosperitybankusa.com/privacy)
+- [LinkedIn](https://www.linkedin.com/company/prosperity-bank)
+
+## APIs
+No first-party public API is published by Prosperity Bank. developer.* and api.* subdomains do not serve a developer surface, and no /developers, /api, or /.well-known API-discovery documents exist as of this review.
+
+## Open finance access
+Consumer-permissioned data access is available only through third-party aggregators:
+- Mastercard Open Banking (Finicity)
+- Plaid
+- Similar bank-data aggregators
+
+## Artifacts in this repo
+- [Domain security probe](security/prosperity-bank-domain-security.yml) — TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for prosperitybankusa.com
