@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/prosperity-bank/integrations
+- https://n8n.io/integrations/prosperity-bank/
+- https://composio.dev/toolkits/prosperity-bank
+- https://monid.ai/tools/prosperity-bank
+checked:
+- https://composio.dev/toolkits/prosperity-bank
+- https://monid.ai/tools/prosperity-bank
+- https://n8n.io/integrations/prosperity-bank/
+- https://zapier.com/apps/prosperity-bank/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
